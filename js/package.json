@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/gilded_rose.js",
   "scripts": {
-    "test:jest": "jest *.test.js",
+    "test:jest": "jest .test.js",
     "test:mocha": "mocha ./spec/*.spec.js"
   },
   "dependencies": {},
