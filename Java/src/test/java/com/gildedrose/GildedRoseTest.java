@@ -1,17 +1,22 @@
 package com.gildedrose;
 
-import static org.junit.Assert.*;
 
+import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 public class GildedRoseTest {
 
     @Test
     public void foo() {
+        // Given
         Item[] items = new Item[] { new Item("foo", 0, 0) };
         GildedRose app = new GildedRose(items);
+
+        // When
         app.updateQuality();
-        assertEquals("fixme", app.items[0].name);
+
+        // Then
+        Assertions.assertThat(app.items[0].name).isEqualTo("fixme");
     }
 
 }
