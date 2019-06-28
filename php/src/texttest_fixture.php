@@ -1,6 +1,8 @@
 <?php
 
-require_once 'gilded_rose.php';
+
+use App\GildedRose;
+use App\Item;
 
 echo "OMGHAI!\n";
 
@@ -18,7 +20,9 @@ $items = array(
 );
 
 $app = new GildedRose($items);
-
+if(!isset($argv)) {
+    $argv = [];
+}
 $days = 2;
 if (count($argv) > 1) {
     $days = (int) $argv[1];
